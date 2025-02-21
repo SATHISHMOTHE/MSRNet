@@ -32,7 +32,7 @@ args = parser.parse_args()
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = args.gpus
 
-model_restoration = MPRNet()
+model_restoration = Msrnet()
 
 utils.load_checkpoint(model_restoration,args.weights)
 print("===>Testing using weights: ",args.weights)
@@ -40,8 +40,8 @@ model_restoration.cuda()
 model_restoration = nn.DataParallel(model_restoration)
 model_restoration.eval()
 
-datasets = ['Rain100L', 'Rain100H', 'Test100', 'Test1200', 'Test2800']
-# datasets = ['Rain100L']
+datasets = []
+# datasets = []
 
 for dataset in datasets:
     rgb_dir_test = os.path.join(args.input_dir, dataset, 'input')
