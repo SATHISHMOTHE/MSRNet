@@ -8,8 +8,7 @@ VERBOSE: True
 
 MODEL:
   MODE: 'LLIE'
-  SESSION: 'MPRNet'
-
+ 
 # Optimization arguments.
 OPTIM:
   BATCH_SIZE: 8
@@ -24,7 +23,7 @@ TRAINING:
   RESUME: True
   TRAIN_PS: 128
   VAL_PS: 128
-  TRAIN_DIR: '/content/drive/MyDrive/MPRNet/MPRNet/LLIE/Datasets/LOL Resize/train'       # path to training data
-  VAL_DIR: '/content/drive/MyDrive/MPRNet/MPRNet/LLIE/Datasets/LOL Resize/test' # path to validation data
-  SAVE_DIR: '/content/drive/MyDrive/MPRNet/MPRNet/LLIE/checkpoints'           # path to save models and images
+  TRAIN_DIR: '       # path to training data
+  VAL_DIR: ' # path to validation data
+  SAVE_DIR: '         # path to save models and images
   # SAVE_IMAGES: False
